@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveNugetPackages>false</ResolveNugetPackages>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8CF7396B-9E2E-3DD4-9DE7-2D2D67F75296}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/Files/Dev/VST/Tools/VST_SDK/vst3sdk/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -SD:/Files/Dev/VST/Projects/Knob -BD:/Files/Dev/VST/Projects/Knob/build --check-stamp-file D:/Files/Dev/VST/Projects/Knob/build/vst3sdk/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_AAXSupport.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_AddCommonOptions.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_AddSMTGLibrary.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_AddVST3Library.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_AddVST3Options.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_Bundle.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_CodeSign.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_ConfigureCmakeGenerator.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_CoreAudioSupport.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_CustomModuleTarget.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_DetectPlatform.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_ExportedSymbols.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_FindJack.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_Global.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_PlatformIOS.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_PlatformToolset.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_Platform_Windows.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_PrefixHeader.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_SetDebugExecutable.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_SetupVST3LibraryDefaultPath.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_UniversalBinary.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_VST3_SDK.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_VstGuiSupport.cmake;D:\Program Files\CMake\share\cmake-3.29\Modules\CMakeParseArguments.cmake;D:\Program Files\CMake\share\cmake-3.29\Modules\CMakePrintHelpers.cmake;D:\Program Files\CMake\share\cmake-3.29\Modules\CheckLanguage.cmake;D:\Program Files\CMake\share\cmake-3.29\Modules\FindPackageHandleStandardArgs.cmake;D:\Program Files\CMake\share\cmake-3.29\Modules\FindPackageMessage.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Files\Dev\VST\Projects\Knob\build\vst3sdk\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/Files/Dev/VST/Tools/VST_SDK/vst3sdk/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"D:\Program Files\CMake\bin\cmake.exe" -SD:/Files/Dev/VST/Projects/Knob -BD:/Files/Dev/VST/Projects/Knob/build --check-stamp-file D:/Files/Dev/VST/Projects/Knob/build/vst3sdk/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_AAXSupport.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_AddCommonOptions.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_AddSMTGLibrary.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_AddVST3Library.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_AddVST3Options.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_Bundle.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_CodeSign.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_ConfigureCmakeGenerator.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_CoreAudioSupport.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_CustomModuleTarget.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_DetectPlatform.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_ExportedSymbols.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_FindJack.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_Global.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_PlatformIOS.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_PlatformToolset.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_Platform_Windows.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_PrefixHeader.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_SetDebugExecutable.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_SetupVST3LibraryDefaultPath.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_UniversalBinary.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_VST3_SDK.cmake;D:\Files\Dev\VST\Tools\VST_SDK\vst3sdk\cmake\modules\SMTG_VstGuiSupport.cmake;D:\Program Files\CMake\share\cmake-3.29\Modules\CMakeParseArguments.cmake;D:\Program Files\CMake\share\cmake-3.29\Modules\CMakePrintHelpers.cmake;D:\Program Files\CMake\share\cmake-3.29\Modules\CheckLanguage.cmake;D:\Program Files\CMake\share\cmake-3.29\Modules\FindPackageHandleStandardArgs.cmake;D:\Program Files\CMake\share\cmake-3.29\Modules\FindPackageMessage.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Files\Dev\VST\Projects\Knob\build\vst3sdk\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\Files\Dev\VST\Projects\Knob\build\ZERO_CHECK.vcxproj">
+      <Project>{C77A4376-F098-3768-81AB-5115AA365F62}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\Files\Dev\VST\Projects\Knob\build\vst3sdk\base\base.vcxproj">
+      <Project>{3A0124D3-5A7D-3F2A-9204-F53AF372BCF0}</Project>
+      <Name>base</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Files\Dev\VST\Projects\Knob\build\vst3sdk\public.sdk\samples\vst-utilities\moduleinfotool\moduleinfotool.vcxproj">
+      <Project>{C7064F8A-D671-3AF8-8A56-22F02B6FF710}</Project>
+      <Name>moduleinfotool</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Files\Dev\VST\Projects\Knob\build\vst3sdk\pluginterfaces\pluginterfaces.vcxproj">
+      <Project>{EBE3EB5D-3C2E-3310-9D62-562C18635B0E}</Project>
+      <Name>pluginterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Files\Dev\VST\Projects\Knob\build\vst3sdk\public.sdk\sdk.vcxproj">
+      <Project>{FB9552EE-CC84-36A8-B2C9-B67C239F4DDA}</Project>
+      <Name>sdk</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Files\Dev\VST\Projects\Knob\build\vst3sdk\public.sdk\sdk_common.vcxproj">
+      <Project>{0D31269F-2844-3413-A204-8EF2C7938142}</Project>
+      <Name>sdk_common</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Files\Dev\VST\Projects\Knob\build\vst3sdk\public.sdk\sdk_hosting.vcxproj">
+      <Project>{C2FC737A-BF71-3D01-B83C-4EFFEEE9E775}</Project>
+      <Name>sdk_hosting</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Files\Dev\VST\Projects\Knob\build\vst3sdk\public.sdk\samples\vst-hosting\validator\validator.vcxproj">
+      <Project>{0755812E-394B-380E-9B09-BB90F8E86D5D}</Project>
+      <Name>validator</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Files\Dev\VST\Projects\Knob\build\vst3sdk\VSTGUI.build\vstgui\lib\vstgui.vcxproj">
+      <Project>{7DBAF981-2C39-35C1-B203-C1DE66C5AC13}</Project>
+      <Name>vstgui</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Files\Dev\VST\Projects\Knob\build\vst3sdk\VSTGUI.build\vstgui\standalone\vstgui_standalone.vcxproj">
+      <Project>{D40EA68C-31A1-3201-A731-9529CFC49CC7}</Project>
+      <Name>vstgui_standalone</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Files\Dev\VST\Projects\Knob\build\vst3sdk\vstgui_support.vcxproj">
+      <Project>{B6A3A937-E036-3C24-93D4-65C7AAF8AF73}</Project>
+      <Name>vstgui_support</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Files\Dev\VST\Projects\Knob\build\vst3sdk\VSTGUI.build\vstgui\uidescription\vstgui_uidescription.vcxproj">
+      <Project>{F0ADA58A-1575-3DA5-A39A-09C61FD7D170}</Project>
+      <Name>vstgui_uidescription</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
